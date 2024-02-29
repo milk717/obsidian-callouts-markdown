@@ -25,8 +25,8 @@ const parseCallout = (children: ReactNode) => {
     type: matches.at(1),
     title: Array.isArray(children) ? children.at(1) : matches.at(2),
     content: Array.isArray(children)
-      ? children.slice(2)
-      : str.replace(matches.at(0), ''),
+      ? [children.at(2).replace(/^\n/, ''), ...children.slice(3)]
+      : str.replace(regex, ''),
   };
 };
 
