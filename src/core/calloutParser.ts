@@ -44,7 +44,7 @@ export const calloutParser = (children: ReactNode) => {
   };
 
   return {
-    type,
+    type: type as string,
     title,
     children: [
       ...children.slice(0, firstChildrenIndex),
