@@ -8,22 +8,26 @@ const defaultResponse = {
   children: undefined,
 };
 
-const parseCallout = (str: string) => {
-  const pattern = `\\[!([^\\n]+)\\](?:[ ]+([^\\n]+))?`;
+const parseCallout = (children: ReactNode) => {
+  const str = Array.isArray(children) ? children.at(0) : children;
+  const pattern = `\\[!([^\\n]+)\\]\\s+`;
   const regex = new RegExp(pattern);
   const matches = str.match(regex);
 
-  return matches
-    ? {
-        type: matches.at(1),
-        title: matches.at(2),
-        content: str.replace(matches.at(0) + '\n', ''),
-      }
-    : {
-        type: NORMAL_CALLOUT_TYPE,
-        title: undefined,
-        content: str,
-      };
+  if (!matches)
+    return {
+      type: NORMAL_CALLOUT_TYPE,
+      title: undefined,
+      content: str,
+    };
+
+  return {
+    type: matches.at(1),
+    title: Array.isArray(children) ? children.at(1) : matches.at(2),
+    content: Array.isArray(children)
+      ? children.slice(2)
+      : str.replace(matches.at(0), ''),
+  };
 };
 
 export const calloutParser = (children: ReactNode) => {
