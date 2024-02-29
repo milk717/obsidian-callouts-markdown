@@ -9,7 +9,7 @@ import ErrorIcon from '../assets/icons/error.svg?react';
 import BugIcon from '../assets/icons/bug.svg?react';
 import ExampleIcon from '../assets/icons/example.svg?react';
 import QuoteIcon from '../assets/icons/quote.svg?react';
-import {NORMAL_CALLOUT_TYPE} from '../core/constants.ts';
+import {NORMAL_CALLOUT_TYPE} from '../constants.ts';
 
 const calloutStyleOptions = {
   note: {

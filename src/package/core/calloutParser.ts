@@ -1,5 +1,5 @@
 import {isValidElement, ReactNode} from 'react';
-import {NORMAL_CALLOUT_TYPE} from './constants.ts';
+import {NORMAL_CALLOUT_TYPE} from '../constants.ts';
 
 const defaultResponse = {
   type: NORMAL_CALLOUT_TYPE,

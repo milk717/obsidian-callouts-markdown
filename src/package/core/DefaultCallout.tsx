@@ -1,6 +1,6 @@
 import {CalloutProps} from '../types/callout.ts';
 import calloutStyleOptions from './calloutStyleOptions.ts';
-import './callouts.css';
+import '../assets/styles/callouts.css';
 
 const DefaultCallout: React.FC<CalloutProps> = ({type, title, children}) => {
   const {icon: Icon, color, backgroundColor} = calloutStyleOptions[type];

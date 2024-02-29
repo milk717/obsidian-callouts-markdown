@@ -1,7 +1,7 @@
 import React, {HTMLAttributes} from 'react';
 import {calloutParser} from './calloutParser.ts';
-import {NORMAL_CALLOUT_TYPE} from './constants.ts';
-import calloutComponentOptions from '../callouts/calloutComponentOptions.ts';
+import {NORMAL_CALLOUT_TYPE} from '../constants.ts';
+import calloutComponentOptions from './calloutComponentOptions.ts';
 
 const isValidCalloutType = (
   type: string,

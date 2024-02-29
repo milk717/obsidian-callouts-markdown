@@ -1,5 +1,5 @@
 import {ReactNode} from 'react';
-import calloutStyleOptions from '../callouts/calloutStyleOptions.tsx';
+import calloutStyleOptions from '../core/calloutStyleOptions.ts';
 
 export type CalloutTypes = keyof typeof calloutStyleOptions;
 export type CalloutProps = {

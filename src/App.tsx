@@ -1,6 +1,6 @@
 import {HTMLAttributes} from 'react';
 import Post from './tests/posts.mdx';
-import Callout from './core/Callout.tsx';
+import Callout from './package/core/Callout.tsx';
 
 function App() {
   const components = {
