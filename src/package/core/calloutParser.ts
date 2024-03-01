@@ -1,5 +1,6 @@
 import {isValidElement, ReactNode} from 'react';
 import {NORMAL_CALLOUT_TYPE} from '../constants.ts';
+import {CalloutParser} from '../types/callout.ts';
 
 const defaultResponse = {
   type: NORMAL_CALLOUT_TYPE,
@@ -29,7 +30,7 @@ const parseCallout = (children: ReactNode) => {
   };
 };
 
-export const calloutParser = (children: ReactNode) => {
+export const calloutParser: CalloutParser = (children: ReactNode) => {
   if (!Array.isArray(children)) return defaultResponse;
   if (children.every(v => !isValidElement(v))) return defaultResponse;
 
