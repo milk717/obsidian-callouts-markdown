@@ -1,5 +1,5 @@
 import {CalloutComponentProps} from '../types/callout.ts';
-import '../assets/styles/callouts.css';
+import '@package/assets/styles/callouts.css';
 import CheckIcon from '../assets/icons/check.svg?react';
 
 const TextCallout: React.FC<CalloutComponentProps> = ({

@@ -1,5 +1,5 @@
 import {HTMLAttributes} from 'react';
-import Post from './tests/posts.mdx';
+import Post from '@/tests/posts.mdx';
 import {ObsidianCallout} from './package';
 import ErrorIcon from './package/assets/icons/error.svg?react';
 import TextCallout from './package/core/TextCallout.tsx';

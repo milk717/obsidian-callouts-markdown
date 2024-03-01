@@ -4,6 +4,7 @@ import {mdx} from '@cyco130/vite-plugin-mdx';
 import svgr from 'vite-plugin-svgr';
 import dts from 'vite-plugin-dts';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,5 +25,6 @@ export default defineConfig({
     svgr(),
     dts({rollupTypes: true}),
     cssInjectedByJsPlugin(),
+    tsconfigPaths(),
   ],
 });

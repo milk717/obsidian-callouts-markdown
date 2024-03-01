@@ -1,16 +1,16 @@
-import NoteIcon from '../assets/icons/note.svg?react';
-import ClipboardIcon from '../assets/icons/clipboard.svg?react';
-import InfoIcon from '../assets/icons/info.svg?react';
-import TipIcon from '../assets/icons/tip.svg?react';
-import CheckIcon from '../assets/icons/check.svg?react';
-import QuestionIcon from '../assets/icons/question.svg?react';
-import WarningIcon from '../assets/icons/warning.svg?react';
-import ErrorIcon from '../assets/icons/error.svg?react';
-import BugIcon from '../assets/icons/bug.svg?react';
-import ExampleIcon from '../assets/icons/example.svg?react';
-import QuoteIcon from '../assets/icons/quote.svg?react';
-import {NORMAL_CALLOUT_TYPE} from '../constants.ts';
-import {CalloutOptions} from '../types/callout.ts';
+import NoteIcon from '@package/assets/icons/note.svg?react';
+import ClipboardIcon from '@package/assets/icons/clipboard.svg?react';
+import InfoIcon from '@package/assets/icons/info.svg?react';
+import TipIcon from '@package/assets/icons/tip.svg?react';
+import CheckIcon from '@package/assets/icons/check.svg?react';
+import QuestionIcon from '@package/assets/icons/question.svg?react';
+import WarningIcon from '@package/assets/icons/warning.svg?react';
+import ErrorIcon from '@package/assets/icons/error.svg?react';
+import BugIcon from '@package/assets/icons/bug.svg?react';
+import ExampleIcon from '@package/assets/icons/example.svg?react';
+import QuoteIcon from '@package/assets/icons/quote.svg?react';
+import {NORMAL_CALLOUT_TYPE} from '@package/constants.ts';
+import {CalloutOptions} from '@package/types/callout.ts';
 
 const calloutOptions: CalloutOptions = {
   note: {

@@ -1,1 +1,1 @@
-export {default as ObsidianCallout} from './core/Callout.tsx';
+export {default as ObsidianCallout} from '@package/core/Callout.tsx';

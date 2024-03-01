@@ -7,8 +7,8 @@ import {
   CalloutTypes,
   CustomCalloutComponents,
   CustomCalloutOptions,
-} from '../types/callout.ts';
-import DefaultCallout from './DefaultCallout.tsx';
+} from '@package/types/callout.ts';
+import DefaultCallout from '@package/core/DefaultCallout.tsx';
 
 const isValidCalloutType = (
   type: string,
