@@ -10,6 +10,10 @@ import {
 } from '@package/types/callout.ts';
 import DefaultCallout from '@package/core/DefaultCallout.tsx';
 
+/**
+ * Because users sometimes create new callouts through components or options,
+ * a type verification function is created as follows
+ */
 const isValidCalloutType = (
   type: string,
   components?: CustomCalloutComponents,
