@@ -12,8 +12,10 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
     "jsx": "react-jsx",
+    "declaration": true,
 
     /* Linting */
     "strict": true,
@@ -21,6 +23,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src/package"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
