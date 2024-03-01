@@ -10,7 +10,8 @@ const defaultResponse = {
 
 const parseCallout = (children: ReactNode) => {
   const str = Array.isArray(children) ? children.at(0) : children;
-  const pattern = `\\[!([^\\n]+)\\]\\s+`;
+  const pattern = `\\[!([^\\n]+)\\](?:[ ]+([^\\n]+))?`;
+
   const regex = new RegExp(pattern);
   const matches = str.match(regex);
 
@@ -21,12 +22,14 @@ const parseCallout = (children: ReactNode) => {
       content: str,
     };
 
+  const [_, type, title] = matches;
+
   return {
-    type: matches.at(1),
-    title: Array.isArray(children) ? children.at(1) : matches.at(2),
+    type: type,
+    title: Array.isArray(children) ? children.at(1) : title,
     content: Array.isArray(children)
-      ? [children.at(2).replace(/^\n/, ''), ...children.slice(3)]
-      : str.replace(regex, ''),
+      ? [children.at(2).trim(), ...children.slice(3)]
+      : str.replace(regex, '').trim(),
   };
 };
 
