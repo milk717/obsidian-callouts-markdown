@@ -1,19 +1,41 @@
 {
-  "name": "mdx-obdisian-callout",
-  "private": true,
-  "version": "0.0.0",
+  "name": "mdx-obsidian-callout",
+  "description": "Library for parsing blockquote in mdxProvider into obsidian callout grammar",
+  "version": "0.0.1",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "gatsby",
+    "mdx",
+    "mdx-provider",
+    "obsidian",
+    "callout",
+    "react-component"
+  ],
+  "author": "milk717 <robolinadaoo@gmail.com> (https://www.milk717.com)",
+  "bugs": {
+    "url": "https://github.com/milk717/mdx-obsidian-callout/issues"
+  },
+  "homepage": "https://github.com/milk717/mdx-obsidian-callout#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milk717/mdx-obsidian-callout.git"
+  },
+  "files": [
+    "dist"
+  ],
   "type": "module",
+  "module": "dist/mdx-obdisian-callout.js",
+  "main": "dist/mdx-obdisian-callout.umd.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@cyco130/vite-plugin-mdx": "^1.0.4",
     "@mdx-js/react": "^3.0.1",
     "@types/react": "^18.2.56",
@@ -31,5 +53,9 @@
     "vite": "^5.1.4",
     "vite-plugin-mdx": "^3.6.0",
     "vite-plugin-svgr": "^4.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
   }
 }
