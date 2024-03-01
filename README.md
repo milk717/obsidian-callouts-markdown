@@ -66,7 +66,7 @@ Supports all types of callouts that can be used in Obsidian.
 ```
 You can customize the icon, background color, and title text color of the callout using ObsidianCallout's `options`.
 The icon type is `React.SVGProps<SVGSVGElement>`.
-### 콜아웃 컴포넌트 커스텀
+### Customizing Callout Components
 ```typescript jsx
   const components = {
     blockquote: (props: HTMLAttributes<HTMLElement>) => (
