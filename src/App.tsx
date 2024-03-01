@@ -1,13 +1,15 @@
 import {HTMLAttributes} from 'react';
 import Post from './tests/posts.mdx';
-import Callout from './package/core/Callout.tsx';
+import {ObsidianCallout} from './package';
 
 function App() {
   const components = {
     p: (props: HTMLAttributes<HTMLElement>) => (
       <p className="whitespace-pre-line" {...props} />
     ),
-    blockquote: (props: HTMLAttributes<HTMLElement>) => <Callout {...props} />,
+    blockquote: (props: HTMLAttributes<HTMLElement>) => (
+      <ObsidianCallout {...props} />
+    ),
   };
 
   return (
