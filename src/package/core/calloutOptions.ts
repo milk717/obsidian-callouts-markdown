@@ -10,9 +10,9 @@ import BugIcon from '../assets/icons/bug.svg?react';
 import ExampleIcon from '../assets/icons/example.svg?react';
 import QuoteIcon from '../assets/icons/quote.svg?react';
 import {NORMAL_CALLOUT_TYPE} from '../constants.ts';
-import {CalloutStyleOptions} from '../types/callout.ts';
+import {CalloutOptions} from '../types/callout.ts';
 
-const calloutStyleOptions: CalloutStyleOptions = {
+const calloutOptions: CalloutOptions = {
   note: {
     icon: NoteIcon,
     color: '#306BD6',
@@ -151,4 +151,4 @@ const calloutStyleOptions: CalloutStyleOptions = {
   },
 } as const;
 
-export default calloutStyleOptions;
+export default calloutOptions;

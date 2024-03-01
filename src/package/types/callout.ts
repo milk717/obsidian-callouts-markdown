@@ -30,6 +30,7 @@ export type CalloutTypes =
 export type CalloutComponentProps = {
   type: CalloutTypes;
   title?: string;
+  options?: CustomCalloutOptions;
   children: ReactNode;
 };
 
@@ -37,7 +38,7 @@ export type CalloutComponentOptions = {
   [key in CalloutTypes]: React.FC<CalloutComponentProps>;
 };
 
-export type CalloutStyleOptions = {
+export type CalloutOptions = {
   [key in CalloutTypes]: {
     icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
     color: string;
@@ -51,10 +52,19 @@ export type CalloutParser = (children: ReactNode) => {
   children: ReactNode;
 };
 
-export type CustomCalloutOptions = {
+export type CustomCalloutComponents = {
   [key: string]: React.FC<CalloutComponentProps>;
 };
 
+export type CustomCalloutOptions = {
+  [key: string]: {
+    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+    color: string;
+    backgroundColor: string;
+  };
+};
+
 export type CalloutConfig = {
-  components?: CustomCalloutOptions;
+  components?: CustomCalloutComponents;
+  options?: CustomCalloutOptions;
 } & HTMLAttributes<HTMLElement>;

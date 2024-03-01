@@ -2,7 +2,7 @@ import DefaultCallout from './DefaultCallout.tsx';
 import {NORMAL_CALLOUT_TYPE} from '../constants.ts';
 import {CalloutComponentOptions} from '../types/callout.ts';
 
-const calloutComponentOptions: CalloutComponentOptions = {
+const calloutComponents: CalloutComponentOptions = {
   note: DefaultCallout,
 
   abstract: DefaultCallout,
@@ -40,4 +40,4 @@ const calloutComponentOptions: CalloutComponentOptions = {
   [NORMAL_CALLOUT_TYPE]: DefaultCallout,
 } as const;
 
-export default calloutComponentOptions;
+export default calloutComponents;

@@ -1,6 +1,7 @@
 import {HTMLAttributes} from 'react';
 import Post from './tests/posts.mdx';
 import {ObsidianCallout} from './package';
+import ErrorIcon from './package/assets/icons/error.svg?react';
 import TextCallout from './package/core/TextCallout.tsx';
 
 function App() {
@@ -12,7 +13,14 @@ function App() {
       <ObsidianCallout
         {...props}
         components={{
-          black: TextCallout,
+          note: TextCallout,
+        }}
+        options={{
+          note: {
+            icon: ErrorIcon,
+            backgroundColor: 'red',
+            color: 'yellow',
+          },
         }}
       />
     ),
