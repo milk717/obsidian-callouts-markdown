@@ -51,6 +51,10 @@ export type CalloutParser = (children: ReactNode) => {
   children: ReactNode;
 };
 
+export type CustomCalloutOptions = {
+  [key: string]: React.FC<CalloutComponentProps>;
+};
+
 export type CalloutConfig = {
-  components?: Partial<CalloutComponentOptions>;
+  components?: CustomCalloutOptions;
 } & HTMLAttributes<HTMLElement>;
