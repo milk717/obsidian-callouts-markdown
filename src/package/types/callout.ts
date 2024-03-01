@@ -1,4 +1,4 @@
-import {ReactNode} from 'react';
+import {HTMLAttributes, ReactNode} from 'react';
 
 export type CalloutTypes =
   | 'note'
@@ -27,14 +27,14 @@ export type CalloutTypes =
   | 'cite'
   | 'normal';
 
-export type CalloutProps = {
+export type CalloutComponentProps = {
   type: CalloutTypes;
   title?: string;
   children: ReactNode;
 };
 
 export type CalloutComponentOptions = {
-  [key in CalloutTypes]: React.FC<CalloutProps>;
+  [key in CalloutTypes]: React.FC<CalloutComponentProps>;
 };
 
 export type CalloutStyleOptions = {
@@ -50,3 +50,7 @@ export type CalloutParser = (children: ReactNode) => {
   title?: string | undefined;
   children: ReactNode;
 };
+
+export type CalloutConfig = {
+  components?: Partial<CalloutComponentOptions>;
+} & HTMLAttributes<HTMLElement>;
