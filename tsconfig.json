@@ -16,7 +16,6 @@
     "emitDeclarationOnly": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "outDir": "types",
 
     /* Linting */
     "strict": true,
