@@ -37,6 +37,7 @@
   "devDependencies": {
     "@cyco130/vite-plugin-mdx": "^1.0.4",
     "@mdx-js/react": "^3.0.1",
+    "@mdx-js/runtime": "^1.6.22",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@types/jest": "^29.5.12",
