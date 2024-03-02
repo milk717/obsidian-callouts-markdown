@@ -33,6 +33,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
-    "lib": "0.0.1"
+    "lib": "0.0.1",
+    "rehype-sanitize": "^6.0.0"
   }
 }
