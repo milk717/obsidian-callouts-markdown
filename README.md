@@ -73,7 +73,7 @@ The icon type is `React.SVGProps<SVGSVGElement>`.
       <ObsidianCallout
         {...props}
         components={{
-          note: TextCallout,
+          note: CustomCallout,
         }}
       />
     ),
@@ -95,7 +95,7 @@ Callout components can receive the following props.
 #### Custom Callout Example
 - code 
 ```typescript jsx
-const TextCallout: React.FC<CustomCalloutComponentProps> = ({
+const CustomCallout: React.FC<CustomCalloutComponentProps> = ({
                                                                type,
                                                                title,
                                                                children,
@@ -121,7 +121,7 @@ const TextCallout: React.FC<CustomCalloutComponentProps> = ({
       <ObsidianCallout
         {...props}
         components={{
-          black: TextCallout,
+          black: CustomCallout,
         }}
         options={{
            bigError: {

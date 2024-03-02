@@ -96,7 +96,7 @@ function App() {
 #### 커스텀 콜아웃 예시
 - 커스텀 콜아웃 코드
 ```typescript jsx
-const TextCallout: React.FC<CustomCalloutComponentProps> = ({
+const CustomCallout: React.FC<CustomCalloutComponentProps> = ({
                                                                type,
                                                                title,
                                                                children,
@@ -122,7 +122,7 @@ const TextCallout: React.FC<CustomCalloutComponentProps> = ({
       <ObsidianCallout
         {...props}
         components={{
-          black: TextCallout,
+          black: CustomCallout,
         }}
         options={{
            bigError: {
