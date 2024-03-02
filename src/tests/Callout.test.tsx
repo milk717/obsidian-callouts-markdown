@@ -56,5 +56,22 @@ describe('Callout Tests', () => {
         '\ninner callout\nsecond line\n',
       );
     });
+    it('If there is no title, type should be the title', () => {
+      const mdText = `
+> [!abstract]
+> abstract, summary, tldr
+`;
+
+      render(<CalloutMock mdText={mdText} />);
+
+      const titleContainer = document.querySelector('.callout-title > p');
+      const bodyContainer = document.querySelector('.callout-body > p');
+
+      if (!titleContainer) fail('Title parsing error');
+      if (!bodyContainer) fail('Body parsing error');
+
+      expect(titleContainer.textContent).toBe('Abstract');
+      expect(bodyContainer.textContent).toBe('abstract, summary, tldr');
+    });
   });
 });
