@@ -1,5 +1,4 @@
 import {CustomCalloutComponentProps} from '@/package/types/callout.ts';
-// import '@package/assets/styles/callouts.css';
 
 const CustomCallout: React.FC<CustomCalloutComponentProps> = ({
   type,

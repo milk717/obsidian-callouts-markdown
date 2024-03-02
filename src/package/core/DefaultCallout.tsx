@@ -1,6 +1,6 @@
 import {CalloutComponentProps} from '@/package/types/callout.ts';
 import calloutOptions from '@/package/core/calloutOptions.ts';
-// import '@/package/assets/styles/callouts.css';
+import '@/package/assets/styles/callouts.css';
 
 const DefaultCallout: React.FC<CalloutComponentProps> = ({
   type,

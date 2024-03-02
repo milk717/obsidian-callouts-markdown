@@ -1,7 +1,7 @@
 import {render} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CalloutMock from '@/tests/__mocks__/CalloutMock.tsx';
-import CustomCallout from '@/tests/CustomCallout.tsx';
+import CustomCallout from '@/tests/__mocks__/CustomCallout.tsx';
 import SvgMock from '@/tests/__mocks__/SvgMock.tsx';
 
 describe('Callout Tests', () => {
