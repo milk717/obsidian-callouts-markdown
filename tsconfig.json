@@ -5,7 +5,7 @@
     "lib": ["ES2020", "ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "typeRoots": ["./src/package/types/svg.d.ts"],
+    "types": ["jest"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
