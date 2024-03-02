@@ -7,8 +7,8 @@ import {
   CalloutTypes,
   CustomCalloutComponents,
   CustomCalloutOptions,
-} from '@package/types/callout.ts';
-import DefaultCallout from '@package/core/DefaultCallout.tsx';
+} from '@/package/types/callout.ts';
+import DefaultCallout from '@/package/core/DefaultCallout.tsx';
 
 /**
  * Because users sometimes create new callouts through components or options,

@@ -1,6 +1,6 @@
 import {isValidElement, ReactNode} from 'react';
-import {NORMAL_CALLOUT_TYPE} from '@package/constants.ts';
-import {CalloutParser} from '@package/types/callout.ts';
+import {NORMAL_CALLOUT_TYPE} from '@/package/constants.ts';
+import {CalloutParser} from '@/package/types/callout.ts';
 
 const defaultResponse = {
   type: NORMAL_CALLOUT_TYPE,
@@ -22,7 +22,7 @@ const parseCallout = (children: ReactNode) => {
       content: str,
     };
 
-  const [_, type, title] = matches;
+  const [, type, title] = matches;
 
   return {
     type: type,
