@@ -5,7 +5,6 @@
     "lib": ["ES2020", "ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "typeRoots": ["./src/package/types/svg.d.ts"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -25,10 +24,11 @@
 
     "baseUrl": ".",
     "paths": {
-      "@package/*": ["./src/package/*"],
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/package"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [{ "path": "../../tsconfig.node.json"}]
 }

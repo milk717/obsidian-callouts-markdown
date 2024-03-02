@@ -7,6 +7,7 @@
     "skipLibCheck": true,
     "types": ["jest"],
     "esModuleInterop": true,
+    "typeRoots": ["./src/types.d.ts"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -27,6 +28,8 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "include": [
+    "src"
+  ],
+  "references": [{ "path": "../../tsconfig.node.json"}]
 }

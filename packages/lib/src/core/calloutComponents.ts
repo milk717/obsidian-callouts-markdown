@@ -1,6 +1,6 @@
 import DefaultCallout from './DefaultCallout.tsx';
-import {NORMAL_CALLOUT_TYPE} from '@/package/constants.ts';
-import {CalloutComponentOptions} from '@/package/types/callout.ts';
+import {NORMAL_CALLOUT_TYPE} from '@/constants.ts';
+import {CalloutComponentOptions} from '@/types/callout.ts';
 
 const calloutComponents: CalloutComponentOptions = {
   note: DefaultCallout,
