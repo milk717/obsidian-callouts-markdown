@@ -1,9 +1,11 @@
 import {render} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CalloutMock from '@/tests/__mocks__/CalloutMock.tsx';
+import CustomCallout from '@/tests/CustomCallout.tsx';
+import SvgMock from '@/tests/__mocks__/SvgMock.tsx';
 
 describe('Callout Tests', () => {
-  describe('Callout Parsing Tests', () => {
+  describe('Parsing Callout Tests', () => {
     it('Even if there is an html tag inside the callout, it should be rendered normally.', () => {
       const mdText = `
   > [!note] <span><span>title in two span tag </span>title in one span tag</span>
@@ -72,6 +74,55 @@ describe('Callout Tests', () => {
 
       expect(titleContainer.textContent).toBe('Abstract');
       expect(bodyContainer.textContent).toBe('abstract, summary, tldr');
+    });
+  });
+  describe('Custom Callout Tests', () => {
+    it('The components option should allow you to add a new type of callout.', () => {
+      const mdText = `
+> [!Black]
+> custom
+`;
+
+      render(
+        <CalloutMock mdText={mdText} components={{block: CustomCallout}} />,
+      );
+
+      const titleContainer = document.querySelector('.callout-title > p');
+      const bodyContainer = document.querySelector('.callout-body > p');
+
+      if (!titleContainer) fail('Title parsing error');
+      if (!bodyContainer) fail('Body parsing error');
+
+      expect(titleContainer.textContent).toBe('Black');
+      expect(bodyContainer.textContent).toBe('custom');
+    });
+    it('Options should allow for the addition of a new type of callout', () => {
+      const mdText = `
+> [!Black]
+> custom
+`;
+
+      render(
+        <CalloutMock
+          mdText={mdText}
+          options={{
+            block: {
+              icon: SvgMock,
+              color: 'black',
+              backgroundColor: 'gray',
+            },
+          }}
+        />,
+      );
+
+      const titleContainer = document.querySelector('.callout-title > p');
+      const bodyContainer = document.querySelector('.callout-body > p');
+
+      if (!titleContainer) fail('Title parsing error');
+      if (!bodyContainer) fail('Body parsing error');
+
+      expect(titleContainer.textContent).toBe('Black');
+      expect(bodyContainer.textContent).toBe('custom');
     });
   });
 });

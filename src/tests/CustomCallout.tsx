@@ -1,7 +1,7 @@
 import {CustomCalloutComponentProps} from '@/package/types/callout.ts';
-import '@package/assets/styles/callouts.css';
+// import '@package/assets/styles/callouts.css';
 
-const TextCallout: React.FC<CustomCalloutComponentProps> = ({
+const CustomCallout: React.FC<CustomCalloutComponentProps> = ({
   type,
   children,
 }) => {
@@ -15,4 +15,4 @@ const TextCallout: React.FC<CustomCalloutComponentProps> = ({
   );
 };
 
-export default TextCallout;
+export default CustomCallout;

@@ -5,7 +5,7 @@ const config: Config = {
   testEnvironment: 'jsdom',
   // moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleNameMapper: {
-    '\\.svg$': '<rootDir>/src/tests/__mocks__/svgMock.tsx',
+    '\\.svg$': '<rootDir>/src/tests/__mocks__/SvgMock.tsx',
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   // transformIgnorePatterns: ['node_modules/(?!(react-markdown)/)'],
