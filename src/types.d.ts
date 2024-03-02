@@ -1,4 +1,5 @@
 declare module '*.mdx' {
-  let MDXComponent: (props: never) => Element;
+  import {ReactNode} from 'react';
+  let MDXComponent: (props: any) => ReactNode;
   export default MDXComponent;
 }
