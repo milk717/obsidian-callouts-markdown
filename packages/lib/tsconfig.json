@@ -10,9 +10,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "rootDir": "src"
   },
   "include": ["src"],
-  "exclude": ["src/tests"],
   "extends": "../../tsconfig.node.json"
 }
