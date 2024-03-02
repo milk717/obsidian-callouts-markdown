@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <div className="grid grid-cols-2 gap-8 m-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 m-8">
       <div>
         <TextArea
           id="callout-textarea"
@@ -33,7 +33,7 @@ function App() {
           onChange={handleTextChange}
         />
       </div>
-      <div>
+      <div className="-order-1 sm:order-none">
         <label className="block font-medium leading-6 text-gray-900">
           Callout will be rendered here
         </label>
