@@ -12,8 +12,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
+  "exclude": ["src/tests"],
   "extends": "../../tsconfig.node.json"
 }

@@ -1,4 +1,4 @@
-import {CustomCalloutComponentProps} from '@/package/types/callout.ts';
+import {CustomCalloutComponentProps} from '@/types/callout.ts';
 
 const CustomCallout: React.FC<CustomCalloutComponentProps> = ({
   type,

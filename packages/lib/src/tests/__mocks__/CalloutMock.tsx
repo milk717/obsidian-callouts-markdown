@@ -1,11 +1,11 @@
 import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
 import {HTMLAttributes} from 'react';
-import {ObsidianCallout} from '@/package';
 import {
   CustomCalloutComponents,
   CustomCalloutOptions,
-} from '@/package/types/callout.ts';
+} from '@/types/callout.ts';
+import {ObsidianCallout} from '@/index.ts';
 
 type CalloutMockProps = {
   mdText: string;
