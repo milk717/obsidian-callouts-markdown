@@ -21,10 +21,10 @@ const CalloutOptionCustomArea: React.FC<CalloutOptionsCustomAreaProps> = ({
 
   const calloutCode = `<ObsidianCallout
   options={{
-    info: {
+    ${type}: {
       icon: '',
-      color: '#17803D',
-      backgroundColor: '#EFFDF4',
+      color: '${color}',
+      backgroundColor: '${backgroundColor}',
     },
   }}
 />`;
