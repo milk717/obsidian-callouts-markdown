@@ -4,7 +4,21 @@ import {oneDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import TextInput from '@/components/ui/TextInput.tsx';
 import React from 'react';
 
-const CalloutOptionCustomArea = () => {
+type CalloutOptionsCustomAreaProps = {
+  options: {
+    type: string;
+    color: string;
+    background: string;
+  };
+  onOptionChange: (key: string, value: string) => void;
+};
+
+const CalloutOptionCustomArea: React.FC<CalloutOptionsCustomAreaProps> = ({
+  options,
+  onOptionChange,
+}) => {
+  const {type, color, backgroundColor} = options;
+
   const calloutCode = `<ObsidianCallout
   options={{
     info: {
@@ -26,6 +40,8 @@ const CalloutOptionCustomArea = () => {
           <TextInput
             labelText="callout type"
             placeholder="ex) info, error, customType"
+            value={type}
+            onChange={e => onOptionChange('type', e.target.value)}
           />
           <div className="col-span-full">
             <label className="block text-sm leading-2 text-gray-900">
@@ -36,10 +52,14 @@ const CalloutOptionCustomArea = () => {
           <TextInput
             labelText="callout title color"
             placeholder="ex) red, #bdbdbd"
+            value={color}
+            onChange={e => onOptionChange('color', e.target.value)}
           />
           <TextInput
             labelText="callout background color"
             placeholder="ex) blue, #2411ff"
+            value={backgroundColor}
+            onChange={e => onOptionChange('backgroundColor', e.target.value)}
           />
         </div>
       </div>

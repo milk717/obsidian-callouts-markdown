@@ -7,17 +7,35 @@ import {ObsidianCallout} from 'lib';
 
 type CalloutRenderAreaProps = {
   text: string;
+  options: {
+    type: string;
+    color: string;
+    background: string;
+  };
 };
 
-const CalloutRenderArea: React.FC<CalloutRenderAreaProps> = ({text}) => {
+const CalloutRenderArea: React.FC<CalloutRenderAreaProps> = ({
+  text,
+  options,
+}) => {
+  const {type, color, backgroundColor} = options;
   const components = {
     p: (props: HTMLAttributes<HTMLElement>) => (
       <p className="whitespace-pre-line" {...props} />
     ),
     blockquote: (props: HTMLAttributes<HTMLElement>) => (
-      <ObsidianCallout {...props} />
+      <ObsidianCallout
+        {...props}
+        options={{
+          [type]: {
+            color,
+            backgroundColor,
+          },
+        }}
+      />
     ),
   };
+
   return (
     <div>
       <TextLabel>Callout will be rendered here</TextLabel>
