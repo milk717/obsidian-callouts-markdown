@@ -27,7 +27,7 @@ function App() {
       <BackgroundCover />
       <header className="bg-gray-800 py-8">
         <h2 className="text-center text-2xl font-semibold leading-9 tracking-wide text-white">
-          mdx-obsidian-callout playground 🚀
+          obsidian-callouts-markdown playground 🚀
         </h2>
       </header>
       <main className="grid grid-cols-1 md:grid-cols-2 gap-8 m-8">

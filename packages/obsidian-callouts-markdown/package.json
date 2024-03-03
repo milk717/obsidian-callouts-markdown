@@ -1,7 +1,7 @@
 {
   "name": "obsidian-callouts-markdown",
   "description": "Library for parsing blockquote in mdxProvider into obsidian callout grammar",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "keywords": [
     "react",
@@ -29,7 +29,7 @@
     "dist"
   ],
   "type": "module",
-  "module": "dist/lib.js",
+  "module": "dist/obsidian-callouts-markdown.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
