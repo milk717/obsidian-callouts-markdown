@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "typeRoots": ["./src/types.d.ts"],
+    "esModuleInterop": true,
 
     /* Bundler mode */
     "noEmit": true,
