@@ -40,9 +40,9 @@ export type CalloutComponentOptions = {
 
 export type CalloutOptions = {
   [key in CalloutTypes]: {
-    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-    color: string;
-    backgroundColor: string;
+    icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+    color?: string;
+    backgroundColor?: string;
   };
 };
 
@@ -63,9 +63,9 @@ export type CustomCalloutComponents = {
 
 export type CustomCalloutOptions = {
   [key: string]: {
-    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-    color: string;
-    backgroundColor: string;
+    icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+    color?: string;
+    backgroundColor?: string;
   };
 };
 
