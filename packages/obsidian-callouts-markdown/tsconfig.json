@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "types": ["jest"],
-    "typeRoots": ["dist/index.d.ts"],
 
     /* Bundler mode */
     "noEmit": false,
