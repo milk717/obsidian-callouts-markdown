@@ -12,7 +12,16 @@ const sampleMdText = [
     name: 'Inside the callout, html',
     md: `> [!tip] 
 > <h1>This is a callout sample with html</h1>
-> <span>This is a callout sample with html</span>`,
+> <div>Even if there's an html tag inside the callout, it's parsed!</div>
+> Feel free to set up a call-out`,
+  },
+  {
+    id: 'markdown',
+    name: 'Inside the callout, markdown',
+    md: `> [!tip] 
+> ### Markdown h3 title
+> Even if there's a markdown inside the callout, it's parsed!  
+> Feel free to set up a callout`,
   },
 ];
 
