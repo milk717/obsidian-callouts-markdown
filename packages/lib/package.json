@@ -6,20 +6,24 @@
   "keywords": [
     "react",
     "gatsby",
+    "next",
     "mdx",
     "mdx-provider",
+    "react-markdown",
     "obsidian",
+    "markdown",
     "callout",
+    "obsidian-callout",
     "react-component"
   ],
   "author": "milk717 <robolinadaoo@gmail.com> (https://www.milk717.com)",
   "bugs": {
-    "url": "https://github.com/milk717/mdx-obsidian-callout/issues"
+    "url": "https://github.com/milk717/obsidian-callouts-markdown/issues"
   },
-  "homepage": "https://github.com/milk717/mdx-obsidian-callout#readme",
+  "homepage": "https://github.com/milk717/obsidian-callouts-markdown#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/milk717/mdx-obsidian-callout.git"
+    "url": "git+https://github.com/milk717/obsidian-callouts-markdown.git"
   },
   "files": [
     "dist"

@@ -4,8 +4,8 @@ import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import 'github-markdown-css';
 import React, {HTMLAttributes} from 'react';
-import {ObsidianCallout} from 'lib';
 import {IconName, icons} from '@/components/ui/Icon.tsx';
+import {ObsidianCallout} from 'obsidian-callouts-markdown';
 
 type CalloutRenderAreaProps = {
   text: string;

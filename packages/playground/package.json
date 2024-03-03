@@ -1,25 +1,16 @@
 {
   "name": "playground",
-  "description": "mdx-obsidian-callout playground",
+  "description": "obsidian-callouts-markdown playground",
   "version": "0.0.1",
   "license": "MIT",
-  "keywords": [
-    "react",
-    "gatsby",
-    "mdx",
-    "mdx-provider",
-    "obsidian",
-    "callout",
-    "react-component"
-  ],
   "author": "milk717 <robolinadaoo@gmail.com> (https://www.milk717.com)",
   "bugs": {
-    "url": "https://github.com/milk717/mdx-obsidian-callout/issues"
+    "url": "https://github.com/milk717/obsidian-callouts-markdown/issues"
   },
-  "homepage": "https://github.com/milk717/mdx-obsidian-callout#readme",
+  "homepage": "https://github.com/milk717/obsidian-callouts-markdown#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/milk717/mdx-obsidian-callout.git"
+    "url": "git+https://github.com/milk717/obsidian-callouts-markdown.git"
   },
   "type": "module",
   "scripts": {
@@ -35,7 +26,7 @@
   },
   "dependencies": {
     "github-markdown-css": "^5.5.1",
-    "lib": "0.0.1",
+    "obsidian-callouts-markdown": "0.0.1",
     "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "rehype-parse": "^9.0.0",
