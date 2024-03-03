@@ -1,6 +1,9 @@
 name: Test check
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -17,7 +20,7 @@ jobs:
           node-version: '14'
 
       - name: Install Dependencies
-        run: yarn install
+        run: yarn workspace obsidian-callouts-markdown install
 
       - name: Run Tests
-        run: yarn test
+        run: yarn workspace obsidian-callouts-markdown test
