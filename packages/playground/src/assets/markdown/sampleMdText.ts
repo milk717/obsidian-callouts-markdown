@@ -5,7 +5,7 @@ const sampleMdText = [
     md: `> [!question] first callout 
 > This is nested callout sample
 >> [!tip] second callout
->> Overlapped callouts can also be parsed without problems`,
+>> Nested callouts can also be parsed without problems`,
   },
   {
     id: 'html',
