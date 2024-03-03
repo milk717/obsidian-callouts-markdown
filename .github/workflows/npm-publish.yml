@@ -20,6 +20,9 @@ jobs:
       - name: Install Dependencies
         run: yarn workspace obsidian-callouts-markdown install --frozen-lockfile
 
+      - name: Move README.md to Package
+        run: cp README.md packages/obsidian-callouts-markdown/
+
       - name: Build obsidian-callouts-markdown package
         run: yarn workspace obsidian-callouts-markdown build
 
