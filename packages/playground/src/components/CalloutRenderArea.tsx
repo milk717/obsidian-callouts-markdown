@@ -5,11 +5,13 @@ import rehypeSanitize from 'rehype-sanitize';
 import 'github-markdown-css';
 import React, {HTMLAttributes} from 'react';
 import {ObsidianCallout} from 'lib';
+import {IconName, icons} from '@/components/ui/Icon.tsx';
 
 type CalloutRenderAreaProps = {
   text: string;
   options: {
     type: string;
+    iconName: IconName;
     color: string;
     backgroundColor: string;
   };
@@ -19,13 +21,14 @@ const CalloutRenderArea: React.FC<CalloutRenderAreaProps> = ({
   text,
   options,
 }) => {
-  const {type, color, backgroundColor} = options;
+  const {type, iconName, color, backgroundColor} = options;
   const components = {
     blockquote: (props: HTMLAttributes<HTMLElement>) => (
       <ObsidianCallout
         {...props}
         options={{
           [type]: {
+            icon: icons[iconName],
             color,
             backgroundColor,
           },

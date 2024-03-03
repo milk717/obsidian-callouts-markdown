@@ -3,11 +3,13 @@ import BackgroundCover from '@/components/ui/BackgroundCover.tsx';
 import CalloutOptionCustomArea from '@/components/CalloutOptionCustomArea.tsx';
 import CalloutRenderArea from '@/components/CalloutRenderArea.tsx';
 import CalloutTextInputArea from '@/components/CalloutTextInputArea.tsx';
+import {IconName} from '@/components/ui/Icon.tsx';
 
 function App() {
   const [text, setText] = useState('');
   const [options, setOptions] = useState({
     type: 'info',
+    iconName: 'info' as IconName,
     color: '#17803D',
     backgroundColor: '#EFFDF4',
   });

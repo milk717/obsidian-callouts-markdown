@@ -3,10 +3,13 @@ import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {oneDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import TextInput from '@/components/ui/TextInput.tsx';
 import React from 'react';
+import IconSelector from '@/components/IconSelector.tsx';
+import {IconName} from '@/components/ui/Icon.tsx';
 
 type CalloutOptionsCustomAreaProps = {
   options: {
     type: string;
+    iconName: IconName;
     color: string;
     backgroundColor: string;
   };
@@ -17,12 +20,12 @@ const CalloutOptionCustomArea: React.FC<CalloutOptionsCustomAreaProps> = ({
   options,
   onOptionChange,
 }) => {
-  const {type, color, backgroundColor} = options;
+  const {type, iconName, color, backgroundColor} = options;
 
   const calloutCode = `<ObsidianCallout
   options={{
     ${type}: {
-      icon: '',
+      icon: ${iconName.charAt(0).toUpperCase() + iconName.slice(1)}Icon,
       color: '${color}',
       backgroundColor: '${backgroundColor}',
     },
@@ -32,7 +35,7 @@ const CalloutOptionCustomArea: React.FC<CalloutOptionsCustomAreaProps> = ({
   return (
     <div>
       <TextLabel>Customize the callout options here</TextLabel>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 mt-2">
         <SyntaxHighlighter language="tsx" style={oneDark}>
           {calloutCode}
         </SyntaxHighlighter>
@@ -43,12 +46,10 @@ const CalloutOptionCustomArea: React.FC<CalloutOptionsCustomAreaProps> = ({
             value={type}
             onChange={e => onOptionChange('type', e.target.value)}
           />
-          <div className="col-span-full">
-            <label className="block text-sm leading-2 text-gray-900">
-              callout icon
-            </label>
-            <div className="flex gap-4 text-sm mt-0.5">temp</div>
-          </div>
+          <IconSelector
+            iconName={iconName}
+            onIconChange={name => onOptionChange('iconName', name)}
+          />
           <TextInput
             labelText="callout title color"
             placeholder="ex) red, #bdbdbd"
