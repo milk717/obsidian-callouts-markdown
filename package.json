@@ -1,5 +1,5 @@
 {
-  "name": "mdx-obsidian-callout",
+  "name": "obsidian-callouts-markdown-workspaces",
   "description": "Library for parsing blockquote in mdxProvider into obsidian callout grammar",
   "version": "0.0.1",
   "license": "MIT",

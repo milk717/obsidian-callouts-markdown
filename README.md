@@ -1,4 +1,4 @@
-# mdx-obsidian-callout
+# obsidian-callouts-markdown
 [![en](https://img.shields.io/badge/lang-en-7952F6.svg)](https://github.com/milk717/mdx-obsidian-callout#readme)
 [![ko](https://img.shields.io/badge/lang-ko-55BCBB.svg)](https://github.com/milk717/mdx-obsidian-callout/blob/main/docs/README-KR.md)
 
@@ -11,15 +11,17 @@ Transform your markdown syntax into callouts just like in Obsidian!
 I write blog posts using Obsidian, and analyze markdown syntax using [@mdx-js/react](https://www.npmjs.com/package/@mdx-js/react) to operate my [personal blog](https://www.milk717.com/) with Gatsby.
 Writing markdown posts with Obsidian allows you to post conveniently as if you were using services like velog or tistory.
 However, since Obsidian's callout syntax is not standard markdown syntax, callouts written in Obsidian just get parsed as blockquotes in the Gatsby blog.
-To alleviate this inconvenience, I created a library to help use the same callout syntax as Obsidian in MDX.
+To alleviate this inconvenience, I created a library to help use the same callout syntax as Obsidian in Markdown.
 
 ## Quick Start
-1. Install the `mdx-obsidian-callout` package.
+1. Install the `obsidian-callouts-markdown` package.
 ```shell
-npm install mdx-obsidian-callout
-yarn add mdx-obsidian-callout
+npm install obsidian-callouts-markdown
+yarn add obsidian-callouts-markdown
 ```
 2. In the MDXProvider's components setting, map blockquote to ObsidianCallout.
+> It can be used in the same way in react-markdown.
+> However, an additional rehype-raw plug-in is required to recognize the html tag inside the markdown.
 ```typescript jsx
 import Post from '@/tests/posts.mdx';
 import {MDXProvider} from '@mdx-js/react';
@@ -37,11 +39,11 @@ function App() {
 }
 ```
 3. You can now use callouts in markdown with the same syntax as in Obsidian.
-   ![result](https://github.com/milk717/mdx-obsidian-callout/assets/57657868/138600fc-26db-42c9-bbc5-a3c3fa40a601)
+   ![result](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/138600fc-26db-42c9-bbc5-a3c3fa40a601)
 
 ## Configuration
 ### Types of Callouts
-![callout list](https://github.com/milk717/mdx-obsidian-callout/assets/57657868/14c28d32-5399-423b-b3fd-19d3dda12afc)
+![callout list](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/14c28d32-5399-423b-b3fd-19d3dda12afc)
 > **Types of Callout**  
 > note, abstract, summary, tldr, info, todo, tip, hint, important, success, check, done, question, help, faq, warning, caution, attention, danger, error, bug, example, quote, cite, normal
 
@@ -90,7 +92,7 @@ Callout components can receive the following props.
 |
 
 #### Additional explanation image for props
-![callout props](https://github.com/milk717/mdx-obsidian-callout/assets/57657868/359631e2-a086-46fd-971a-f658c9854439)
+![callout props](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/359631e2-a086-46fd-971a-f658c9854439)
 
 #### Custom Callout Example
 - code 
@@ -113,7 +115,7 @@ const CustomCallout: React.FC<CustomCalloutComponentProps> = ({
 };
 ```
 - result
-  ![custom callout result](https://github.com/milk717/mdx-obsidian-callout/assets/57657868/b8699629-35b6-4359-9963-4b73df6ffb6c)
+  ![custom callout result](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/b8699629-35b6-4359-9963-4b73df6ffb6c)
 ### Adding Custom Callout Types
 ```typescript jsx
   const components = {
@@ -139,4 +141,4 @@ In the code example above, new callout formats of type `black` and `bigError` ar
 For callout types, **any string except newline characters (\n)** can be specified.
 If you customize the same callout type in both `components` and `options`, the settings applied in `components` will take effect.
 ## Support
-If you encounter any issues with the library, feel free to [open an issue](https://github.com/milk717/mdx-obsidian-callout/issues).
+If you encounter any issues with the library, feel free to [open an issue](https://github.com/milk717/obsidian-callouts-markdown/issues).

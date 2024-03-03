@@ -1,4 +1,4 @@
-# mdx-obsidian-callout
+# obsidian-callouts-markdown
 [![en](https://img.shields.io/badge/lang-en-7952F6.svg)](https://github.com/milk717/mdx-obsidian-callout#readme)
 [![ko](https://img.shields.io/badge/lang-ko-55BCBB.svg)](https://github.com/milk717/mdx-obsidian-callout/blob/main/docs/README-KR.md)
 
@@ -13,15 +13,17 @@ mdx에서 obsidian 콜아웃 문법을 파싱하기 위한 라이브러리입니
 Gatsby로 [개인 블로그](https://www.milk717.com/)를 운영중입니다. 
 obsidian을 사용해서 마크다운 게시글을 작성하면 마치 velog나 tistory같은 서비스를 이용하는 것 처럼 편리하게 포스팅을 작성할 수 있습니다.  
 하지만, obsidian의 콜아웃 문법은 표준 markdown 문법이 아니라서 obsidian에서 콜아웃을 작성해도 gatsby 블로그에선 그저 blockquote로 구문이 분석될 뿐입니다.
-이러한 불편함을 해소하고자 mdx에서 obsidian 콜아웃 문법과 동일한 문법을 사용하도록 도와주는 라이브러를 제작했습니다.
+이러한 불편함을 해소하고자 markdown에서 obsidian 콜아웃 문법과 동일한 문법을 사용하도록 도와주는 라이브러를 제작했습니다.
 
 ## 빠른 시작
-1. `mdx-obsidian-callout` 패키지를 설치합니다.
+1. `obsidian-callouts-markdown` 패키지를 설치합니다.
 ```shell
-npm install mdx-obsidian-callout
-yarn add mdx-obsidian-callout
+npm install obsidian-callouts-markdown
+yarn add obsidian-callouts-markdown
 ```
 2. MDXProvider의 components 설정에서 blockquote를 ObsidianCallout으로 매핑해줍니다.
+> react-markdown 에서도 완전히 동일한 방법으로 사용 가능합니다.  
+> 단, markdown 내부의 html 태그를 인식하기 위해서는 rehype-raw 플러그인이 추가로 필요합니다.
 ```typescript jsx
 import Post from '@/tests/posts.mdx';
 import {MDXProvider} from '@mdx-js/react';
@@ -39,11 +41,11 @@ function App() {
 }
 ```
 3. 옵시디언과 동일한 문법의 callout을 markdown에서 사용할 수 있게 됩니다.
-   ![result](https://github.com/milk717/mdx-obsidian-callout/assets/57657868/138600fc-26db-42c9-bbc5-a3c3fa40a601)
+   ![result](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/138600fc-26db-42c9-bbc5-a3c3fa40a601)
 
 ## 구성
 ### 콜아웃 종류
-![callout list](https://github.com/milk717/mdx-obsidian-callout/assets/57657868/14c28d32-5399-423b-b3fd-19d3dda12afc)
+![callout list](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/14c28d32-5399-423b-b3fd-19d3dda12afc)
 > **콜아웃 타입 종류**  
 > note, abstract, summary, tldr, info, todo, tip, hint, important, success, check, done, question, help, faq, warning, caution, attention, danger, error, bug, example, quote, cite, normal
 
@@ -91,7 +93,7 @@ function App() {
 | children | ReactNode | true    | 콜아웃 본문에 해당하는 부분입니다.                                  |
 
 #### props에 대한 부가 설명 이미지
-![callout props](https://github.com/milk717/mdx-obsidian-callout/assets/57657868/359631e2-a086-46fd-971a-f658c9854439)
+![callout props](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/359631e2-a086-46fd-971a-f658c9854439)
 
 #### 커스텀 콜아웃 예시
 - 커스텀 콜아웃 코드
@@ -114,7 +116,7 @@ const CustomCallout: React.FC<CustomCalloutComponentProps> = ({
 };
 ```
 - 커스텀 콜아웃 결과
-![custom callout result](https://github.com/milk717/mdx-obsidian-callout/assets/57657868/b8699629-35b6-4359-9963-4b73df6ffb6c)
+![custom callout result](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/b8699629-35b6-4359-9963-4b73df6ffb6c)
 ### 커스텀 콜아웃 타입 추가
 ```typescript jsx
   const components = {
@@ -140,4 +142,4 @@ const CustomCallout: React.FC<CustomCalloutComponentProps> = ({
 콜아웃 타입에는 **개행 문자(`\n`)를 제외한 모든 문자열**을 지정할 수 있습니다.
 `components`와 `options` 두곳에 동일한 콜아웃 타입에 대해 커스텀을 한다면 `components`에 적용한 설정이 적용됩니다.
 ## 지원
-라이브러리에 문제가 있다면 언제든지 [이슈](https://github.com/milk717/mdx-obsidian-callout/issues) 남겨주세요.
+라이브러리에 문제가 있다면 언제든지 [이슈](https://github.com/milk717/obsidian-callouts-markdown/issues) 남겨주세요.
