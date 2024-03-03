@@ -25,10 +25,10 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "github-markdown-css": "^5.5.1",
     "obsidian-callouts-markdown": "1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "rehype-parse": "^9.0.0",
