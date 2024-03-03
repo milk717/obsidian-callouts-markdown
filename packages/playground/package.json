@@ -22,11 +22,13 @@
   "devDependencies": {
     "@types/react-syntax-highlighter": "^15.5.11",
     "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
     "github-markdown-css": "^5.5.1",
-    "obsidian-callouts-markdown": "1.0.2",
+    "install": "^0.13.0",
+    "obsidian-callouts-markdown": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
