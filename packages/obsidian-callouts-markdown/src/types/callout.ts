@@ -1,4 +1,4 @@
-import {HTMLAttributes, ReactNode} from 'react';
+import {FC, FunctionComponent, HTMLAttributes, ReactNode, SVGProps} from 'react';
 
 export type CalloutTypes =
   | 'note'
@@ -35,12 +35,12 @@ export type CalloutComponentProps = {
 };
 
 export type CalloutComponentOptions = {
-  [key in CalloutTypes]: React.FC<CalloutComponentProps>;
+  [key in CalloutTypes]: FC<CalloutComponentProps>;
 };
 
 export type CalloutOptions = {
   [key in CalloutTypes]: {
-    icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+    icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
     color?: string;
     backgroundColor?: string;
   };
@@ -58,12 +58,12 @@ export type CustomCalloutComponentProps = Omit<
 > & {type?: string};
 
 export type CustomCalloutComponents = {
-  [key: string]: React.FC<CustomCalloutComponentProps>;
+  [key: string]: FC<CustomCalloutComponentProps>;
 };
 
 export type CustomCalloutOptions = {
   [key: string]: {
-    icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+    icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
     color?: string;
     backgroundColor?: string;
   };
