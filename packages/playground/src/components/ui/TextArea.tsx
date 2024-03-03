@@ -1,15 +1,12 @@
 import {TextareaHTMLAttributes} from 'react';
+import TextLabel from '@/components/ui/TextLabel.tsx';
 
 type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const TextArea: React.FC<TextAreaProps> = ({...args}) => {
   return (
     <div className="col-span-full">
-      <label
-        htmlFor={args.id}
-        className="block font-medium leading-6 text-gray-900">
-        Write a callout text here!
-      </label>
+      <TextLabel htmlFor={args.id}>Write a callout text here!</TextLabel>
       <div className="mt-2">
         <textarea
           {...args}
