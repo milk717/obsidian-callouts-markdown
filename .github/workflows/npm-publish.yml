@@ -20,11 +20,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn workspace obsidian-callouts-markdown install --frozen-lockfile
 
       - name: Build obsidian-callouts-markdown package
         run: yarn workspace obsidian-callouts-markdown build
-        working-directory: ./obsidian-callouts-markdown
 
       - name: Publish to NPM
         run: npm publish
