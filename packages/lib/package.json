@@ -25,7 +25,7 @@
     "dist"
   ],
   "type": "module",
-  "module": "dist/mdx-obsidian-callout.js",
+  "module": "dist/lib.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
