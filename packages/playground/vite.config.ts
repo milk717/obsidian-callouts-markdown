@@ -6,16 +6,5 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    lib: {
-      entry: './src/package/index.ts',
-      name: 'mdx-obsidian-callout',
-      formats: ['es'],
-    },
-    rollupOptions: {
-      input: './src/package/index.ts',
-      external: ['react', 'react-dom'],
-    },
-  },
   plugins: [react(), mdx(), svgr(), tsconfigPaths()],
 });
