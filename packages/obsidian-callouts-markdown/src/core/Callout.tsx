@@ -9,6 +9,7 @@ import {
   CustomCalloutOptions,
 } from '@/types/callout.ts';
 import DefaultCallout from '@/core/DefaultCallout.tsx';
+import ErrorBoundary from '@/utils/ErrorBoundary.tsx';
 
 /**
  * Because users sometimes create new callouts through components or options,
@@ -26,7 +27,11 @@ const isValidCalloutType = (
   );
 };
 
-const Callout: React.FC<CalloutConfig> = ({components, options, ...args}) => {
+const InnerCallout: React.FC<CalloutConfig> = ({
+  components,
+  options,
+  ...args
+}) => {
   const {type, title, children} = calloutParser(args.children);
 
   const validType = isValidCalloutType(type, components, options)
@@ -43,6 +48,14 @@ const Callout: React.FC<CalloutConfig> = ({components, options, ...args}) => {
       options={options}>
       {children}
     </SelectedCallout>
+  );
+};
+
+const Callout: React.FC<CalloutConfig> = ({...args}) => {
+  return (
+    <ErrorBoundary>
+      <InnerCallout {...args} />
+    </ErrorBoundary>
   );
 };
 
