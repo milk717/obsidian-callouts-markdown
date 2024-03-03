@@ -7,7 +7,7 @@
 This library is for parsing Obsidian callout syntax in MDX.
 Transform your markdown syntax into callouts just like in Obsidian!
 
-What is this library?
+## What is this library?
 I write blog posts using Obsidian, and analyze markdown syntax using [@mdx-js/react](https://www.npmjs.com/package/@mdx-js/react) to operate my [personal blog](https://www.milk717.com/) with Gatsby.
 Writing markdown posts with Obsidian allows you to post conveniently as if you were using services like velog or tistory.
 However, since Obsidian's callout syntax is not standard markdown syntax, callouts written in Obsidian just get parsed as blockquotes in the Gatsby blog.
