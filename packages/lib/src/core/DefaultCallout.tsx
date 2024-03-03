@@ -1,6 +1,7 @@
 import {CalloutComponentProps} from '@/types/callout.ts';
 import calloutOptions from '@/core/calloutOptions.ts';
 import '@/assets/styles/callouts.css';
+import NoteIcon from '@/assets/icons/note.svg?react';
 
 const DefaultCallout: React.FC<CalloutComponentProps> = ({
   type,
@@ -8,11 +9,9 @@ const DefaultCallout: React.FC<CalloutComponentProps> = ({
   options,
   children,
 }) => {
-  const {
-    icon: Icon,
-    color,
-    backgroundColor,
-  } = {...calloutOptions, ...options}[type];
+  const {icon, color, backgroundColor} = {...calloutOptions, ...options}[type];
+
+  const Icon = typeof icon === 'function' ? icon : NoteIcon;
 
   return (
     <div className="callout-box" style={{backgroundColor: backgroundColor}}>
