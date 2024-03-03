@@ -45,9 +45,10 @@ function App() {
 ### Types of Callouts
 ![callout list](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/14c28d32-5399-423b-b3fd-19d3dda12afc)
 > **Types of Callout**  
-> note, abstract, summary, tldr, info, todo, tip, hint, important, success, check, done, question, help, faq, warning, caution, attention, danger, error, bug, example, quote, cite, normal
+> normal ,note, abstract, summary, tldr, info, todo, tip, hint, important, success, check, done, question, help, faq, warning, caution, attention, danger, error, bug, example, quote, cite, normal
 
 Supports all types of callouts that can be used in Obsidian.
+If you have not created a callout type, it is recognized as a normal type.
 
 ### Customizing Callout Options
 ```typescript jsx

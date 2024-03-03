@@ -47,9 +47,10 @@ function App() {
 ### 콜아웃 종류
 ![callout list](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/14c28d32-5399-423b-b3fd-19d3dda12afc)
 > **콜아웃 타입 종류**  
-> note, abstract, summary, tldr, info, todo, tip, hint, important, success, check, done, question, help, faq, warning, caution, attention, danger, error, bug, example, quote, cite, normal
+> normal ,note, abstract, summary, tldr, info, todo, tip, hint, important, success, check, done, question, help, faq, warning, caution, attention, danger, error, bug, example, quote, cite, normal
 
 옵시디언에서 사용할 수 있는 모든 종류의 콜아웃 타입을 지원합니다.  
+콜아웃 타입을 작성하지 않은 경우 normal 타입으로 인식됩니다.
 
 ### 콜아웃 옵션 커스텀
 ```typescript jsx
