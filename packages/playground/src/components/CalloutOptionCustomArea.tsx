@@ -8,7 +8,7 @@ type CalloutOptionsCustomAreaProps = {
   options: {
     type: string;
     color: string;
-    background: string;
+    backgroundColor: string;
   };
   onOptionChange: (key: string, value: string) => void;
 };

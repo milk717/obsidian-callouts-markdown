@@ -1,4 +1,4 @@
-import {ChangeEventHandler, useState} from 'react';
+import {useState} from 'react';
 import BackgroundCover from '@/components/ui/BackgroundCover.tsx';
 import CalloutOptionCustomArea from '@/components/CalloutOptionCustomArea.tsx';
 import CalloutRenderArea from '@/components/CalloutRenderArea.tsx';
@@ -12,8 +12,8 @@ function App() {
     backgroundColor: '#EFFDF4',
   });
 
-  const handleTextChange: ChangeEventHandler<HTMLTextAreaElement> = e => {
-    setText(e.target.value);
+  const handleTextChange = (text: string) => {
+    setText(text);
   };
 
   const handleOptionChange = (key: string, value: string) => {

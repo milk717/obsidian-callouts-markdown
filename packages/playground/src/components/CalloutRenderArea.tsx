@@ -10,7 +10,7 @@ type CalloutRenderAreaProps = {
   options: {
     type: string;
     color: string;
-    background: string;
+    backgroundColor: string;
   };
 };
 
@@ -20,6 +20,9 @@ const CalloutRenderArea: React.FC<CalloutRenderAreaProps> = ({
 }) => {
   const {type, color, backgroundColor} = options;
   const components = {
+    h1: (props: HTMLAttributes<HTMLElement>) => (
+      <h1 className="text-2xl font-bold" {...props} />
+    ),
     p: (props: HTMLAttributes<HTMLElement>) => (
       <p className="whitespace-pre-line" {...props} />
     ),
