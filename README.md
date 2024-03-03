@@ -2,7 +2,7 @@
 [![en](https://img.shields.io/badge/lang-en-7952F6.svg)](https://github.com/milk717/mdx-obsidian-callout#readme)
 [![ko](https://img.shields.io/badge/lang-ko-55BCBB.svg)](https://github.com/milk717/mdx-obsidian-callout/blob/main/docs/README-KR.md)
 
-(Insert a gif demonstrating it on the preview site here)
+![2024-03-039 39 59-ezgif com-video-to-gif-converter](https://github.com/milk717/obsidian-callouts-markdown/assets/57657868/5f1e8c9d-8bbb-43fc-89cd-252634e1f634)
 
 This library is for parsing Obsidian callout syntax in MDX.
 Transform your markdown syntax into callouts just like in Obsidian!
