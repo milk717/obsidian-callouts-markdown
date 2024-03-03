@@ -9,17 +9,27 @@ const defaultResponse = {
 };
 
 const parseCallout = (children: ReactNode) => {
-  const str = Array.isArray(children) ? children.at(0) : children;
+  if (
+    isValidElement(children) ||
+    (Array.isArray(children) && isValidElement(children?.at(0)))
+  )
+    return {
+      type: NORMAL_CALLOUT_TYPE,
+      title: undefined,
+      content: children,
+    };
+
+  const calloutTypeString = Array.isArray(children) ? children.at(0) : children;
   const pattern = `\\[!([^\\n]+)\\](?:[ ]+([^\\n]+))?`;
 
   const regex = new RegExp(pattern);
-  const matches = str.match(regex);
+  const matches = calloutTypeString.match(regex);
 
   if (!matches)
     return {
       type: NORMAL_CALLOUT_TYPE,
       title: undefined,
-      content: str,
+      content: calloutTypeString,
     };
 
   const [, type, title] = matches;
@@ -29,7 +39,7 @@ const parseCallout = (children: ReactNode) => {
     title: Array.isArray(children) ? children.at(1) : title,
     content: Array.isArray(children)
       ? [children.at(2).trim(), ...children.slice(3)]
-      : str.replace(regex, '').trim(),
+      : calloutTypeString.replace(regex, '').trim(),
   };
 };
 
