@@ -125,4 +125,23 @@ describe('Callout Tests', () => {
       expect(bodyContainer.textContent).toBe('custom');
     });
   });
+  describe('Edge case', () => {
+    it('There is no type, and even if the markdown syntax immediately comes in, it should work normally.', () => {
+      const mdText = `
+> [Black](link.com)
+> ha ha ha 
+`;
+
+      render(<CalloutMock mdText={mdText} />);
+
+      const titleContainer = document.querySelector('.callout-title > p');
+      const bodyContainer = document.querySelector('.callout-body > p');
+
+      if (!titleContainer) fail('Title parsing error');
+      if (!bodyContainer) fail('Body parsing error');
+
+      expect(titleContainer.textContent).toBe('Normal');
+      expect(bodyContainer.textContent).toBe('Black\nha ha ha');
+    });
+  });
 });
