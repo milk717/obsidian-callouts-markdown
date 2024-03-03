@@ -1,0 +1,33 @@
+name: Publish obsidian-callouts-markdown Package
+
+on:
+  push:
+    tags:
+      - 'v.*'
+    paths:
+      - 'obsidian-callouts-markdown/**'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build obsidian-callouts-markdown package
+        run: yarn workspace obsidian-callouts-markdown build
+        working-directory: ./obsidian-callouts-markdown
+
+      - name: Publish to NPM
+        run: npm publish
+        working-directory: ./obsidian-callouts-markdown/dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
