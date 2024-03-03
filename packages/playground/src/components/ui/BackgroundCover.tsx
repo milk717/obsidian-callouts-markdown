@@ -1,6 +1,6 @@
 const BackgroundCover = () => {
   return (
-    <div className="absolute left-0 top-0 right-0 bottom-0 overflow-clip bg-indigo-50 -z-20">
+    <div className="fixed left-0 top-0 right-0 bottom-0 overflow-clip bg-indigo-50 -z-20">
       <svg
         viewBox="0 0 1024 1024"
         className="relative left-0 -bottom-1/2 -z-10 [mask-image:radial-gradient(closest-side,white,transparent)]"

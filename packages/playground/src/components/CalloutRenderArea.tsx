@@ -37,7 +37,7 @@ const CalloutRenderArea: React.FC<CalloutRenderAreaProps> = ({
   return (
     <div>
       <TextLabel>Callout will be rendered here</TextLabel>
-      <div className="markdown-body min-h-64 border-0 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 mt-2 p-3 bg-gray-50 sm:h-[calc(100svh_-_12.25rem)] overflow-y-scroll">
+      <div className="markdown-body min-h-64 border-0 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 mt-2 p-3 bg-gray-50 md:h-[calc(100svh_-_12.25rem)] overflow-y-scroll">
         <ReactMarkdown
           rehypePlugins={[rehypeRaw, rehypeSanitize]}
           components={components}>

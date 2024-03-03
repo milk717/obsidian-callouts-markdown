@@ -19,7 +19,7 @@ const CalloutTextInputArea: React.FC<CalloutTextInputAreaProps> = ({
           {sampleMdText.map(({id, name, md}) => (
             <span
               key={id}
-              className="inline-flex items-center rounded-md bg-purple-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 cursor-pointer"
+              className="inline-flex items-center rounded-md bg-indigo-200 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 cursor-pointer"
               onClick={() => onChange(md)}>
               {name}
             </span>

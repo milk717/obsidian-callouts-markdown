@@ -28,15 +28,19 @@ function App() {
           mdx-obsidian-callout playground 🚀
         </h2>
       </header>
-      <main className="grid grid-cols-2 gap-8 m-8">
+      <main className="grid grid-cols-1 md:grid-cols-2 gap-8 m-8">
         <div className="flex flex-col gap-8">
-          <CalloutOptionCustomArea
-            options={options}
-            onOptionChange={handleOptionChange}
-          />
+          <div className="order-1 md:order-none">
+            <CalloutOptionCustomArea
+              options={options}
+              onOptionChange={handleOptionChange}
+            />
+          </div>
           <CalloutTextInputArea text={text} onChange={handleTextChange} />
         </div>
-        <CalloutRenderArea text={text} options={options} />
+        <div className="-order-1 md:order-none">
+          <CalloutRenderArea text={text} options={options} />
+        </div>
       </main>
     </>
   );
