@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* Bundler mode */
     "noEmit": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
 
     "baseUrl": ".",
     "paths": {
