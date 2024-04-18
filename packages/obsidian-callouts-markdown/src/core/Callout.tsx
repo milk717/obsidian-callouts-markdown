@@ -9,7 +9,6 @@ import {
   CustomCalloutOptions,
 } from '@/types/callout.ts';
 import DefaultCallout from '@/core/DefaultCallout.tsx';
-import ErrorBoundary from '@/utils/ErrorBoundary.tsx';
 
 /**
  * Because users sometimes create new callouts through components or options,
@@ -52,11 +51,15 @@ const InnerCallout: React.FC<CalloutConfig> = ({
 };
 
 const Callout: React.FC<CalloutConfig> = ({...args}) => {
-  return (
-    <ErrorBoundary>
-      <InnerCallout {...args} />
-    </ErrorBoundary>
-  );
+  // return (
+  //   <ErrorBoundary>
+  //     <InnerCallout {...args} />
+  //   </ErrorBoundary>
+  // );
+
+  return(
+    <InnerCallout {...args} />
+  )
 };
 
 export default Callout;
