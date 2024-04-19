@@ -40,7 +40,6 @@
     "test:coverage": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js --coverage"
   },
   "devDependencies": {
-    "vite-plugin-css-injected-by-js": "^3.4.0",
     "vite-plugin-dts": "^3.7.3"
   },
   "peerDependencies": {
